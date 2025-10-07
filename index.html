@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Web2Risk Agency</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="#home" class="logo">
+          <img src="./images/logo/web-2-risk-web-agency-white.png" alt="Web2Risk Agency" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">Who are we?</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <h1><span>Web2Risk Agency</span></h1>
+        <p>We transform your ideas into unique digital experiences.</p>
+        <div class="overlay"></div>
+      </section>
+  
+      <section id="about" class="about container">
+        <h2>What we do</h2>
+  
+        <p>Web2Risk Agency is an <strong>innovative web agency</strong> specializing in the <strong>design and development</strong> of custom websites and web applications. Located at the heart of digital transformation, our agency supports businesses in optimizing their online presence by providing <strong>technological solutions</strong> tailored to their specific needs.</p>
+        <p>Our services cover the entire digital creation process, from initial analysis to final deployment. Whether for a showcase site, an e-commerce platform, or a complex web application, Web2Risk Agency guarantees efficient, secure, and scalable developments to meet the current market challenges.</p>
+        <p>With a team of experienced developers and creative designers, Web2Risk Agency places user experience at the center of every project. With a collaborative and innovative approach, we transform our clients' ideas into concrete projects, optimized to enhance their visibility and digital growth.</p>
+      </section>
+  
+      <section id="services" class="services container">
+        <h2>Our services</h2>
+  
+        <div class="service-cards">
+          <div class="card">
+            <img src="./images/services/websites.jpg" alt="Website" />
+  
+            <div class="card-content">
+              <h3>Custom Development</h3>
+              <p>Creation of unique websites optimized for all devices.</p>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="./images/services/applications.jpg" alt="Applications" />
+            
+            <div class="card-content">
+              <h3>Web Applications</h3>
+              <p>Design of intuitive and high-performance applications.</p>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="./images/services/seo.jpg" alt="SEO" />
+  
+            <div class="card-content">
+              <h3>SEO Optimization</h3>
+              <p>Improvement of SEO to maximize visibility.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <section id="team" class="team container">
+        <h2>What a team!</h2>
+        
+        <div class="team-cards">
+          <div class="card">
+            <img src="./images/equipe/emma.jpg" alt="Emma" />
+  
+            <div class="card-content">
+              <h3>Emma</h3>
+              <p>Digital project manager, ensuring the success of your projects.</p>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="./images/equipe/lucas.jpg" alt="Lucas" />
+  
+            <div class="card-content">
+              <h3>Lucas</h3>
+              <p>Front-End Developer, specialist in seamless interfaces.</p>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img src="./images/equipe/sophia.jpg" alt="Sophia" />
+  
+            <div class="card-content">
+              <h3>Sofia</h3>
+              <p>SEO expert, your ally in maximising your visibility.</p>
+            </div>
+        </div>
+      </section>
+  
+      <section id="contact" class="contact">
+        <h2>Contact us!</h2>
+  
+        <span class="status"></span>
+  
+        <form id="contact-form" action="mail.php" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email" required />
+          </div>
+  
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your message" rows="10" required></textarea>
+          </div>
+          
+          <button id="form-trigger" type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Web2Risk Agency. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

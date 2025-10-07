@@ -1,0 +1,14 @@
+services:
+  http:
+    user: "${UID}:${GID}"
+    build:
+      context: .
+    ports:
+      - 9000:8080
+    volumes:
+      - ./:/var/www/html # :delegated or :cached
+  smtp:
+    image: docker.io/namshi/smtp
+    env_file: .env
+    ports:
+      - 25:25
