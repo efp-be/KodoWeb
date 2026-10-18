@@ -1,30 +1,44 @@
 /**
  * Handle mail sending
  * 
- * @param {String} name 
- * @param {String} email 
- * @param {String} message 
+ * @param {string} name 
+ * @param {string} email 
+ * @param {string} message 
  */
-const sendmail = async (name, email, message) => {
-  const response = await fetch('mail.php', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      name,
-      email,
-      message,
-    }),
-  });
+const sendMail = async (name, email, message) => {
+  const container = document.querySelector('.contact .status');
+  const form = document.getElementById('contact-form');
+  const button = document.getElementById('form-trigger');
 
-  const data = await response.json();
+  button.disabled = true;
 
-  if (data) {
-    const container = document.querySelector('.contact .status');
+  try {
+    const response = await fetch('mail.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
+    });
+
+    const data = await response.json();
+
     container.className = 'status';
     container.classList.add(data.status);
     container.textContent = data.message;
+
+    if (data.status === 'success') {
+      form.reset();
+    }
+  } catch (error) {
+    container.className = 'status error';
+    container.textContent = 'Your message could not be sent. Please try again later.';
+  } finally {
+    button.disabled = false;
   }
 };
 
@@ -59,6 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();  
-    sendmail(event.target[0].value, event.target[1].value, event.target[2].value);
+    sendMail(event.target[0].value, event.target[1].value, event.target[2].value);
   });
 });

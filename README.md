@@ -2,27 +2,40 @@
 
 ## Quick start
 
-- Create a directory *db*
-- Create a file *db/password.txt*
-- Just put a password in *db/password.txt*
+- Optional: copy *.env.example* to *.env* to change the email addresses used by the contact form
 - Run the following command:
 
 ```bash
-docker compose up
+docker compose up --build -d
 ```
-- Go to http://localhost:9000
+- Go to http://localhost:9000 to see the website
+- Go to http://localhost:8025 to see the emails sent by the contact form (Mailpit: no email is really sent)
 - Run the following command to shutdown properly containers
 ```bash
 docker compose down
 ```
+
+Without Docker, the pages can be opened with any local server (e.g. Live Server), but the contact form needs PHP.
+
+## Send real emails (optional)
+
+By default, emails are caught by Mailpit. To send them through a real SMTP server:
+
+- Copy *.msmtprc.example* to *.msmtprc* and fill in your SMTP server and account
+- Copy *docker-compose.override.yaml.example* to *docker-compose.override.yaml*
+- In *.env*, set `CONTACT_TO` to your real inbox and `CONTACT_FROM` to the address of the SMTP account
+- Run `docker compose up -d` again
+
+To go back to Mailpit, remove *docker-compose.override.yaml* and run `docker compose up -d` again. The three files are ignored by git: never commit them, they contain your credentials.
 
 ## Code sample
 
 **Application files to consider regarding the application project are:**
 - index.html
 - mail.php
-- scripts.js
-- style.css
+- assets/js/scripts.js
+- assets/css/ (one stylesheet per component)
+- BACKLOG.md (starter tickets for the agency)
 
 **Particular attention points:**
 - A clear semanticaly exact and minimalist HTML structure, with just what's needed.
@@ -44,3 +57,4 @@ docker compose down
 
 - [Docker](https://www.docker.com/)
 - [Use containers for PHP development](https://docs.docker.com/guides/php/develop/)
+- [Mailpit](https://mailpit.axllent.org/)
