@@ -5,7 +5,9 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends msmtp \
     && rm -rf /var/lib/apt/lists/*
 
-RUN printf 'account default\nhost mailpit\nport 1025\nfrom noreply@web2risk.test\n' > /etc/msmtprc \
+# Mail server host: "mailpit" with docker compose, overridable at build time
+ARG MAIL_HOST=mailpit
+RUN printf 'account default\nhost %s\nport 1025\nfrom noreply@web2risk.test\n' "$MAIL_HOST" > /etc/msmtprc \
     && echo 'sendmail_path = "/usr/bin/msmtp -t"' > /usr/local/etc/php/conf.d/mail.ini
 
 # Move PHP errors to the container logs, not in the responses
@@ -21,3 +23,6 @@ RUN a2enmod headers \
     && a2enconf no-cache
 
 WORKDIR /var/www/html
+
+# Site files baked into the image (for hosting); locally, the compose volume replaces them
+COPY . .
