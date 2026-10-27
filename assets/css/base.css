@@ -29,7 +29,8 @@ body {
   font-family: var(--font-family);
   line-height: 1.6;
   color: var(--onyx);
-}
+  background-color: color-mix(in oklab, var(--kodo-lavender), white 70%);
+  }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-family-heading);
@@ -46,7 +47,7 @@ h2 {
   font-weight: 700;
   margin-bottom: var(--space-block);
   text-decoration: underline;
-  text-decoration-color: color-mix(in oklab, var(--sky-blue), white 50%);
+  text-decoration-color: color-mix(in oklab, var(--kodo-violet), white 50%);
   text-decoration-thickness: 0.35em;
   text-underline-offset: -0.2em;
   text-decoration-skip-ink: none;
