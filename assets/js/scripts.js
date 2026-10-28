@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
   burger.addEventListener('click', () => {
     navLinks.classList.toggle('nav-active');
     burger.classList.toggle('toggle');
+    burger.setAttribute('aria-expanded', navLinks.classList.contains('nav-active'));
   });
 
   navLinks.addEventListener('click', (e) => {
@@ -67,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (navLinks.classList.contains('nav-active')) {
         navLinks.classList.remove('nav-active');
         burger.classList.remove('toggle');
+        burger.setAttribute('aria-expanded', 'false');
       }
     }
   });
