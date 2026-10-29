@@ -2,7 +2,8 @@ header {
   background: var(--onyx);
   padding: 10px var(--gutter);
   position: fixed;
-  width: calc(100% - 2 * var(--gutter));
+  box-sizing: border-box;
+  width: 100%;
   z-index: 1000;
 }
 
