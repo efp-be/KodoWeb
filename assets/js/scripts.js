@@ -58,13 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   navLinks.addEventListener('click', (e) => {
     if (e.target.tagName === 'A') {
-      e.preventDefault();
-
-      const targetId = e.target.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      
-      targetSection?.scrollIntoView({ behavior: 'smooth' });
-
       if (navLinks.classList.contains('nav-active')) {
         navLinks.classList.remove('nav-active');
         burger.classList.remove('toggle');
