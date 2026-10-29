@@ -46,7 +46,7 @@ if (!$to || !$from) {
   sendJsonResponse('error', 'An unexpected error occurred', 500);
 }
 
-$subject = 'New message from contact form - Web2Risk';
+$subject = 'New message from contact form - KodoWeb';
 
 $body = "Name: $name\n";
 $body .= "Email: $email\n\n";
