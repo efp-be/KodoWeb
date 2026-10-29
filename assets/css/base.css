@@ -4,6 +4,10 @@
   --air-force-blue: #568ea3;
   --sky-blue: #68c3d4;
   --onyx: #313638;
+  --kodo-violet: #a78bfa;
+  --kodo-violet-dark: #6d28d9;
+  --kodo-lavender: #ddd6fe;
+  --kodo-mist: #f5f3ff;
   --air-force-blue-dark: color-mix(in oklab, var(--air-force-blue), black 25%);
   --font-family: 'Open Sans', sans-serif;
   --font-family-heading: 'Space Grotesk', sans-serif;
