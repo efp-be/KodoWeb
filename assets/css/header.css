@@ -64,6 +64,18 @@ header .nav-links a:focus-visible::after {
   transform: scaleX(1);
 }
 
+.burger {
+  display: none;
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+.burger:focus-visible {
+  outline: 2px solid var(--school-bus-yellow);
+  outline-offset: 5px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   header .container {
@@ -79,6 +91,7 @@ header .nav-links a:focus-visible::after {
     width: 100%;
     height: 100vh;
     transform: translateX(100%);
+    visibility: hidden;
   }
 
   header .nav-links li {
@@ -88,6 +101,7 @@ header .nav-links a:focus-visible::after {
 
   .nav-links.nav-active {
     transform: translateX(0);
+    visibility: visible;
   }
 
   .burger {

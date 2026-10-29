@@ -1,4 +1,4 @@
-# Web2Risk agency one page website solution example
+# KodoWeb agency one page website solution example
 
 ## Quick start
 
