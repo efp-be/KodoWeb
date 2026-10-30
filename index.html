@@ -7,8 +7,11 @@
 
    
     <title>KodoWeb Agency – Custom websites, web apps & SEO</title>
-
-    <meta name="description" content="Web2Risk Agency designs custom websites and web applications, and boosts your online visibility with SEO. Turn your ideas into unique digital experiences.">
+    <meta name="description" content="KodoWeb Agency designs custom websites and web applications, and boosts your online visibility with SEO. Turn your ideas into unique digital experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="KodoWeb Agency – Custom websites, web apps & SEO">
+    <meta property="og:description" content="KodoWeb Agency designs custom websites and web applications, and boosts your online visibility with SEO. Turn your ideas into unique digital experiences.">
+    <meta property="og:image" content="assets/img/misc/hero.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,21 +29,21 @@
     <header>
       <nav class="container">
         <a href="#home" class="logo">
-          <img src=".\assets\img\logo\kodoweb-logo-transparent-blanc.png" alt="KodoWeb Agency" width="360" height="138">
+         <img src="./assets/img/logo/kodoweb-logo-transparent-blanc.png" alt="KodoWeb Agency" width="360" height="138">
         </a>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="main-menu">
           <li><a href="#about">What we do</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         
-        <div class="burger">
+        <button class="burger" type="button" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
       </nav>
     </header>
 
@@ -99,7 +102,7 @@
 
         <div class="team-cards">
           <div class="card">
-            <img src=".\assets\img\equipe\eve.webp" alt="Emma" width="1000" height="1500" loading="lazy">
+           <img src="./assets/img/equipe/eve.webp" alt="Blonde woman with glasses and a bob haircut, dressed in blue" width="1000" height="1500" loading="lazy">
   
             <div class="card-content">
               <h3>Eve</h3>
