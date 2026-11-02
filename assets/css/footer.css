@@ -1,7 +1,10 @@
 footer {
-  padding: 20px 0;
-  background: var(--onyx);
+  padding: 25px;
+  background-color: #4a4270;
+  border-top: 3px solid var(--violet);
   text-align: center;
-  font-size: var(--text-small);
-  color: var(--white);
+}
+footer p {
+  color: white;
+  font-size: 14px;
 }
