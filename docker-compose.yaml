@@ -7,8 +7,8 @@ services:
     volumes:
       - ./:/var/www/html:ro
     environment:
-      CONTACT_TO: ${CONTACT_TO:-contact@web2risk.test}
-      CONTACT_FROM: ${CONTACT_FROM:-noreply@web2risk.test}
+      CONTACT_TO: ${CONTACT_TO:-contact@kodoweb.test}
+      CONTACT_FROM: ${CONTACT_FROM:-noreply@kodoweb.test}
     depends_on:
       - mailpit
   mailpit:
