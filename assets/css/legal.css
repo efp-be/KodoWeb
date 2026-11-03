@@ -1,0 +1,38 @@
+header .back-home {
+  margin-left: auto;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+header .back-home:hover,
+header .back-home:focus-visible {
+  color: var(--school-bus-yellow);
+}
+
+/* Leave room for the fixed header */
+.legal {
+  max-width: 800px;
+  padding-top: calc(var(--space-section) + 80px);
+  text-align: left;
+}
+
+.legal h1 {
+  font-size: var(--text-h2);
+  margin-bottom: var(--space-block);
+}
+
+.legal h2 {
+  font-size: var(--text-h3);
+  margin: var(--space-block) 0 var(--space-text);
+}
+
+.legal p {
+  margin-bottom: var(--space-text);
+  font-size: var(--text-body);
+}
+
+.legal a {
+  color: var(--kodo-violet-dark);
+}

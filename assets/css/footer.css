@@ -5,3 +5,12 @@ footer {
   font-size: var(--text-small);
   color: var(--white);
 }
+
+footer a {
+  color: var(--kodo-lavender);
+}
+
+footer a:hover,
+footer a:focus-visible {
+  color: var(--school-bus-yellow);
+}
