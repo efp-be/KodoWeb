@@ -7,7 +7,7 @@ RUN apt-get update \
 
 # Mail server host: "mailpit" with docker compose, overridable at build time
 ARG MAIL_HOST=mailpit
-RUN printf 'account default\nhost %s\nport 1025\nfrom noreply@web2risk.test\n' "$MAIL_HOST" > /etc/msmtprc \
+RUN printf 'account default\nhost %s\nport 1025\nfrom noreply@kodoweb.test\n' "$MAIL_HOST" > /etc/msmtprc \
     && echo 'sendmail_path = "/usr/bin/msmtp -t"' > /usr/local/etc/php/conf.d/mail.ini
 
 # Move PHP errors to the container logs, not in the responses
