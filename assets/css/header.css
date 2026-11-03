@@ -1,137 +1,97 @@
-header {
-  background: var(--onyx);
-  padding: 10px var(--gutter);
-  position: fixed;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  width: 100%;
-  z-index: 1000;
 }
-
-header nav {
-  display: flex;
-  align-items: center;
-  max-width: 1360px;
-  margin: 0 auto;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
-
-header .logo {
-  display: inline-block;
-  font-size: 1.5rem;
-  text-decoration: none;
+body {
+  font-family: "Segoe UI", sans-serif;
+  color: var(--texte);
+  background-color: var(--fond);
 }
-
-header .logo img {
-  max-width: 180px;
-  height: auto;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--fond);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-header .nav-links {
-  margin-left: auto;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
 }
-
-header .nav-links li {
-  display: inline-block;
-  margin: 0 0 0 20px;
-}
-
-header .nav-links a {
+nav {
   position: relative;
-  padding-bottom: 4px;
-  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.logo img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+/* menu */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.nav-links a {
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
+  color: var(--texte);
+  font-weight: 500;
 }
-
-header .nav-links a:hover {
-  color: var(--school-bus-yellow);
+.nav-links a:hover {
+  color: var(--violet);
+  text-decoration: underline;
 }
-
-header .nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--school-bus-yellow);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-header .nav-links a:hover::after,
-header .nav-links a:focus-visible::after {
-  transform: scaleX(1);
-}
-
+/* menu burger */
 .burger {
   display: none;
-  padding: 0;
+  background: none;
   border: none;
-  background: transparent;
+  cursor: pointer;
+}
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: var(--texte);
 }
 
-.burger:focus-visible {
-  outline: 2px solid var(--school-bus-yellow);
-  outline-offset: 5px;
-}
-
-/* Responsive */
 @media (max-width: 768px) {
-  header .container {
-    padding-left: 10px;
-    padding-right: 10px;
+  .burger {
+    display: block;
   }
 
   .nav-links {
+    display: none;
     position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: var(--onyx);
+    top: 70px;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    transform: translateX(100%);
-    visibility: hidden;
-  }
-
-  header .nav-links li {
-    display: block;
-    margin: 20px;
-  }
-
-  .nav-links.nav-active {
-    transform: translateX(0);
-    visibility: visible;
-  }
-
-  .burger {
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 21px;
-    cursor: pointer;
-    margin-left: auto;
+    gap: 0;
+    background-color: var(--fond);
   }
 
-  .burger span {
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links li {
+    border-top: 1px solid #eee;
+  }
+
+  .nav-links a {
     display: block;
-    height: 3px;
-    width: 25px;
-    background-color: var(--white);
-    border-radius: 3px;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .burger.toggle span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .burger.toggle span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .burger.toggle span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+    padding: 15px 20px;
   }
 }

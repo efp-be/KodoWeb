@@ -1,16 +1,17 @@
 footer {
-  padding: 20px 0;
-  background: var(--onyx);
+  padding: 25px;
+  background-color: #4a4270;
+  border-top: 3px solid var(--violet);
   text-align: center;
-  font-size: var(--text-small);
-  color: var(--white);
 }
-
+footer p {
+  color: white;
+  font-size: 14px;
+}
 footer a {
-  color: var(--kodo-lavender);
+  color: var(--violet);
 }
-
 footer a:hover,
 footer a:focus-visible {
-  color: var(--school-bus-yellow);
+  color: white;
 }

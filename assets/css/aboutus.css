@@ -1,0 +1,28 @@
+.section {
+  padding: 100px 20px;
+}
+.section h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  margin-bottom: 40px;
+  text-align: center;
+}
+.section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--violet);
+  border-radius: 4px;
+  margin: 14px auto 0;
+}
+.about p {
+  max-width: 800px;  
+  margin: 0 auto 20px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #444;
+}
+.about strong {
+  color: var(--violet-fonce);
+  font-weight: 600;
+}
