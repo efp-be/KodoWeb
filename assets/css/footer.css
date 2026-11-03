@@ -8,3 +8,9 @@ footer p {
   color: white;
   font-size: 14px;
 }
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: var(--violet);
+}

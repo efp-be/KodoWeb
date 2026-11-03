@@ -1,0 +1,40 @@
+.back-home {
+  text-decoration: none;
+  color: var(--texte);
+  font-weight: 500;
+}
+.back-home:hover {
+  color: var(--violet);
+  text-decoration: underline;
+}
+.legal {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.legal h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  margin-bottom: 40px;
+  text-align: center;
+}
+.legal h2 {
+  font-size: 1.5rem;
+  margin: 40px 0 20px;
+  text-align: left;
+}
+.legal h2::after {
+  margin: 10px 0 0;
+}
+.legal p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #444;
+}
+.legal strong {
+  color: var(--violet-fonce);
+  font-weight: 600;
+}
+.legal a {
+  color: var(--violet-fonce);
+}
