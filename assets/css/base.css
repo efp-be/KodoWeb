@@ -24,6 +24,14 @@
   --text-small: 0.875rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
 /** General elements and typography **/
 body {
   font-family: var(--font-family);
