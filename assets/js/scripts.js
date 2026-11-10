@@ -46,28 +46,13 @@ const sendMail = async (name, email, message) => {
  * Bind events listeners when DOM is loaded
  */
 document.addEventListener('DOMContentLoaded', () => {
-  const burger = document.querySelector('.burger');
-  const navLinks = document.querySelector('.nav-links');
   const contactForm = document.getElementById('contact-form');
   const year = document.getElementById('year');
 
-  year.textContent = new Date().getFullYear();
-
-  burger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-active');
-    burger.classList.toggle('toggle');
-    burger.setAttribute('aria-expanded', navLinks.classList.contains('nav-active'));
-  });
-
-  navLinks.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') {
-      if (navLinks.classList.contains('nav-active')) {
-        navLinks.classList.remove('nav-active');
-        burger.classList.remove('toggle');
-        burger.setAttribute('aria-expanded', 'false');
-      }
-    }
-  });
+  // si le span disparaît du footer, le formulaire doit quand même marcher
+  if (year) {
+    year.textContent = new Date().getFullYear();
+  }
 
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault();  
