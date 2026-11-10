@@ -3,4 +3,10 @@
   --violet-fonce: #7c5cf0;
   --texte: #1a1a2e;
   --fond: #ffffff;
+<<<<<<< HEAD
+=======
+  --font-titre: "Space Grotesk", sans-serif;
+  --espace-bloc: 40px;
+  --espace-texte: 20px;
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   margin: 0;
   padding: 0;
@@ -211,6 +212,11 @@ nav {
   background-color: white;
 }
 
+=======
+.team {
+  background-color: white;
+}
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 .team .intro {
   max-width: 750px;
   margin: 0 auto;
@@ -218,16 +224,25 @@ nav {
   line-height: 1.8;
   color: #555;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 .team-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
+<<<<<<< HEAD
   width: 100%;
   max-width: 1200px;
   margin: 50px auto 0;
 }
 
+=======
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 .team .card {
   background-color: #f5f3ff;
   border-radius: 15px;
@@ -235,17 +250,24 @@ nav {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
+<<<<<<< HEAD
 
 .team .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
 }
 
+=======
+.team .card:hover {
+  transform: translateY(-10px);
+}
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 .team .card img {
   display: block;
   width: 100%;
   height: 340px;
   object-fit: cover;
+<<<<<<< HEAD
   object-position: center;
 }
 
@@ -259,6 +281,13 @@ nav {
 }
 
 /* petit trait violet */
+=======
+  object-position: top;
+}
+.team .card-content {
+  padding: 25px;
+}
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 .team .card-content::before {
   content: "";
   display: block;
@@ -267,6 +296,7 @@ nav {
   margin-bottom: 15px;
   background-color: var(--violet);
 }
+<<<<<<< HEAD
 
 .team .card h3 {
   margin-bottom: 5px;
@@ -282,6 +312,19 @@ nav {
 }
 
 /* le poste prend toujours la meme place pour que les textes soient alignés */
+=======
+.team .card h3 {
+  margin-bottom: 5px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 24px;
+  color: #1a1a2e;
+}
+.team .card p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #555;
+}
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 .team .card .card-intro {
   min-height: 54px;
   margin-bottom: 10px;
@@ -291,18 +334,47 @@ nav {
   text-transform: uppercase;
   color: var(--violet);
 }
+<<<<<<< HEAD
+=======
+.team-cards {
+  width: 100%;
+  max-width: 1200px;
+  margin: 50px auto 0;
+}
+.team .card img {
+  height: 280px;
+}
+.team .card-content {
+  padding: 20px;
+}
+.team .card h3 {
+  font-size: 22px;
+}
+.team .card p {
+  font-size: 14px;
+  line-height: 22px;
+}
+.team .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
+}
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 
 @media (max-width: 1100px) {
   .team-cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 @media (max-width: 600px) {
   .team-cards {
     grid-template-columns: 1fr;
   }
 }
+<<<<<<< HEAD
 
 /* contact */
 .contact {
@@ -394,3 +466,5 @@ footer p {
   color: white;
   font-size: 14px;
 }
+=======
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05

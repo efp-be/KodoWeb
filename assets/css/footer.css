@@ -3,6 +3,19 @@ footer {
   background-color: #4a4270;
   border-top: 3px solid var(--violet);
   text-align: center;
+<<<<<<< HEAD
+=======
+}
+footer p {
+  color: white;
+  font-size: 14px;
+}
+footer a {
+  color: white;
+}
+footer a:hover {
+  color: var(--violet);
+>>>>>>> b21867c0ea13070076eceabf83404967bf514f05
 }
 footer p {
   color: white;

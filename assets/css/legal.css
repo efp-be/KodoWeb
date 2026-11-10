@@ -1,0 +1,40 @@
+.back-home {
+  text-decoration: none;
+  color: var(--texte);
+  font-weight: 500;
+}
+.back-home:hover {
+  color: var(--violet);
+  text-decoration: underline;
+}
+.legal {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.legal h1 {
+  font-family: var(--font-titre);
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  margin-bottom: var(--espace-bloc);
+  text-align: center;
+}
+.legal h2 {
+  font-size: 1.5rem;
+  margin: var(--espace-bloc) 0 var(--espace-texte);
+  text-align: left;
+}
+.legal h2::after {
+  margin: 10px 0 0;
+}
+.legal p {
+  margin-bottom: var(--espace-texte);
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: var(--texte);
+}
+.legal strong {
+  color: var(--violet-fonce);
+  font-weight: 600;
+}
+.legal a {
+  color: var(--violet-fonce);
+}
