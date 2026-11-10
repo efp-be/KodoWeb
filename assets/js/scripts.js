@@ -49,6 +49,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const navLinks = document.querySelector('.nav-links');
   const contactForm = document.getElementById('contact-form');
+  const year = document.getElementById('year');
+
+  year.textContent = new Date().getFullYear();
 
   burger.addEventListener('click', () => {
     navLinks.classList.toggle('nav-active');
