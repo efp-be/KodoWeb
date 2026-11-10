@@ -1,6 +1,8 @@
+/* equipe */
 .team {
   background-color: white;
 }
+
 .team .intro {
   max-width: 750px;
   margin: 0 auto;
@@ -12,9 +14,11 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
+  width: 100%;
   max-width: 1200px;
   margin: 50px auto 0;
 }
+
 .team .card {
   background-color: #f5f3ff;
   border-radius: 15px;
@@ -22,19 +26,30 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
+
 .team .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
 }
+
 .team .card img {
   display: block;
   width: 100%;
   height: 340px;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
 }
+
+/* la photo de Marcelo est cadrée plus bas */
+.team .card img[src*="marcelo"] {
+  object-position: center 35%;
+}
+
 .team .card-content {
-  padding: 25px;
+  padding: 20px;
 }
+
+/* petit trait violet */
 .team .card-content::before {
   content: "";
   display: block;
@@ -43,17 +58,21 @@
   margin-bottom: 15px;
   background-color: var(--violet);
 }
+
 .team .card h3 {
   margin-bottom: 5px;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   color: #1a1a2e;
 }
+
 .team .card p {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 22px;
   color: #555;
 }
+
+/* le poste prend toujours la meme place pour que les textes soient alignés */
 .team .card .card-intro {
   min-height: 54px;
   margin-bottom: 10px;
@@ -62,28 +81,6 @@
   font-weight: bold;
   text-transform: uppercase;
   color: var(--violet);
-}
-.team-cards {
-  width: 100%;
-  max-width: 1200px;
-  margin: 50px auto 0;
-}
-.team .card img {
-  height: 280px;
-}
-.team .card-content {
-  padding: 20px;
-}
-.team .card h3 {
-  font-size: 22px;
-}
-.team .card p {
-  font-size: 14px;
-  line-height: 22px;
-}
-.team .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.2);
 }
 
 @media (max-width: 1100px) {
