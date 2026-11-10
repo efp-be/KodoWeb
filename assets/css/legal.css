@@ -12,24 +12,24 @@
   margin: 0 auto;
 }
 .legal h1 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: var(--font-titre);
   font-size: clamp(2.25rem, 5vw, 3.25rem);
-  margin-bottom: 40px;
+  margin-bottom: var(--espace-bloc);
   text-align: center;
 }
 .legal h2 {
   font-size: 1.5rem;
-  margin: 40px 0 20px;
+  margin: var(--espace-bloc) 0 var(--espace-texte);
   text-align: left;
 }
 .legal h2::after {
   margin: 10px 0 0;
 }
 .legal p {
-  margin-bottom: 20px;
+  margin-bottom: var(--espace-texte);
   line-height: 1.8;
   font-size: 1.05rem;
-  color: #444;
+  color: var(--texte);
 }
 .legal strong {
   color: var(--violet-fonce);
