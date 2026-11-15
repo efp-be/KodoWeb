@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // referme le menu quand on clique sur un lien
   navLinks.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') {
+        if (e.target.closest('a')) {
       if (navLinks.classList.contains('open')) {
         navLinks.classList.remove('open');
         burger.classList.remove('toggle');
